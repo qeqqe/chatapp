@@ -7,12 +7,12 @@ public interface IWebSocketService
 {
     Task AddConnectionAsync(Guid userId, WebSocket webSocket);
     Task RemoveConnectionAsync(Guid userId);
-    Task SendMessageToChatAsunc(Guid userId, WebSocketMessage message, Guid? excludeUserId = null);
-    Task SendMessageToUserAsunc(Guid userId, WebSocketMessage message);
+    Task SendMessageToChatAsync(Guid userId, WebSocketMessage message, Guid? excludeUserId = null);
+    Task SendMessageToUserAsync(Guid userId, WebSocketMessage message);
 
     Task SendMessageToAllAsync(WebSocketMessage message, Guid? excludeUserId = null);
 
     Task<bool> IsUserOnlineAsync(Guid userId);
-    Task<IEnumerable<Guid>> GetOnlineUsrsAsync();
+    Task<IEnumerable<Guid>> GetOnlineUsersAsync();
     
 }
